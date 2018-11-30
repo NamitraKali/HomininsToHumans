@@ -1,0 +1,16 @@
+Input .vcf should have human seqs, nean seqs, deni seqs in this order.
+Usage:
+g++ -o read main.cpp
+
+Case 1: human being distinct
+./read (.vcf) (case#) (output file name)
+e.g.: ./read aligned.vcf 1 output
+Case 2: human same with Nean but different with Deni
+./read (.vcf) (case#) (# of human seqs) (# of nean seqs) (# of devi seqs) (output file name)
+e.g.: ./read aligned.vcf 2 1 6 4 output
+Case 3: human same with deni but different with nean
+./read (.vcf) (case#) (# of human seqs) (# of nean seqs) (# of devi seqs) (output file name)
+e.g.: ./read aligned.vcf 3 1 6 4 output
+
+Output style:
+Tags of human, nean, devi, followed by position, followed by REF->ALT.
